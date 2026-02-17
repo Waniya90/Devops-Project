@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Website</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+            transition: background-color 0.5s;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading">Hello, Welcome!</h1>
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+        function changeContent() {
+            const heading = document.getElementById("heading");
+            heading.innerText = "You clicked the button!";
+
+            // Change background color randomly
+            const colors = ["#f4a261", "#2a9d8f", "#e76f51", "#264653"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>
